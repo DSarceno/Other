@@ -1,14 +1,14 @@
-//   2021-01-28
-//   <program>.f95
+//   aaaa-mm-dd
+//   <program>.c
 //   Diego Sarceño (dsarceno68@gmail.com)
 
 //   Programa <program>
 
 //   Codificación del texto: UTF8
-//   Compiladores probados: GNU Fortran (Ubuntu 20.04 Linux) 4.8.5
+//   Compiladores probados: GNU gcc (Ubuntu 20.04 Linux) 9.3.0
 //   Instrucciones de compilación: no requiere nada mas
-//   gfortran -Wall -pedantic -std=f95 -c -o <program>.o <program>.f95
-//   gfortran -o <program>.x <program>.o 
+//   gcc -Wall -pedantic -std=c11 -c -o <program>.o <program>.c
+//   gcc -o <program>.x <program>.o 
 
 //   Copyright (C) 2021
 //   D. R. Sarceño Ramírez
