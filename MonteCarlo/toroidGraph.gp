@@ -7,8 +7,7 @@
 #    Codificación del texto: UTF8
 #    Compiladores probados: GNU Fortran (Ubuntu 20.04 Linux) 9.3.0
 #    Instrucciones de compilación: no requere nada mas
-#    gfortran -Wall -pedantic -std=f95 -c -o toroidRandom.o toroidRandom.f95
-#    gfortran -o toroidRandom.x toroidRandom.o
+#    gnuplot toroidGraph.gp
 
 #    Copyright (C) 2021
 #    D. R. Sarceño Ramírez
@@ -29,12 +28,18 @@
 #    <http://www.gnu.org/licenses/>.
 #
 # PROGRAM toroidGraph
-#set terminal pdf
-#set output "random.pdf"
+set terminal pdf
+set output "random.pdf"
 
 set view equal xyz
 
-splot "fort.99"
+set title "Toroid Surface"
+set xlabel "x"
+set ylabel "y"
+set zlabel "z"
+
+
+splot "fort.99" t "Random"
 
 
 # END PROGRAM toroidGraph
