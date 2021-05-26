@@ -28,8 +28,8 @@
 #    <http://www.gnu.org/licenses/>.
 #
 # PROGRAM toroidGraph
-set terminal pdf
-set output "random.pdf"
+#set terminal pdf
+#set output "random.pdf"
 
 set view equal xyz
 
