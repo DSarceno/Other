@@ -1,5 +1,5 @@
 !    2021-05-31
-!    hexagonRandomWalk.f95
+!    SphereRandomWalk.f95
 !    Diego Sarceño (dsarceno68@gmail.com)
 
 !    Programa <program>
@@ -7,8 +7,8 @@
 !    Codificación del texto: UTF8
 !    Compiladores probados: GNU Fortran (Ubuntu 20.04 Linux) 9.3.0
 !    Instrucciones de compilación: no requere nada mas
-!    gfortran -Wall -pedantic -std=f95 -c -o hexagonRandomWalk.o hexagonRandomWalk.f95
-!    gfortran -o hexagonRandomWalk.x hexagonRandomWalk.o
+!    gfortran -Wall -pedantic -std=f95 -c -o SphereRandomWalk.o SphereRandomWalk.f95
+!    gfortran -o SphereRandomWalk.x SphereRandomWalk.o
 
 !    Copyright (C) 2021
 !    D. R. Sarceño Ramírez
