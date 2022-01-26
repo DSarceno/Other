@@ -31,5 +31,101 @@
 //   <http://www.gnu.org/licenses/>.
 //PROGRAM mergeSort
 #include <stdio.h>
+#include <math.h>
+
+// VARIABLES
+int i = 0; // Left index
+int j = 0; // Right index
+int k = 0; // new array index
+int n; // mergeSort left index
+int m; // mergeSort right index
+int extra = 0;
+int length_left; // left array length
+int length_right; // right array length
+int length_main; // start
+int left_array; // left array in mergeSort function
+int right_array; // right array in mergeSort function
+
+// MERGE FUNCTION
+int merge(int la, int ra){ // Left and right array as entries
+  int length_left = sizeof(la)/sizeof(la[0]);
+  int length_right = sizeof(ra)/sizeof(ra[0]);
+  int new[length_left + length_right];
+
+  while ((i < length_left) && (j < length_right)){
+    if (la[i] < ra[j]){
+      new[k] = la[i];
+      i += 1;
+    } else{
+      new[k] = ra[j];
+      j += 1;
+    } // end if
+    k += 1;
+  } // end while
+
+  while (i < length_left){
+    new[k] = la[i];
+    i += 1;
+    k += 1;
+  } // end while
+
+  while (j < length_right){
+    new[k] = ra[j];
+    j += 1;
+    k += 1;
+  } // end while
+  return new;
+} // END MERGE FUNCTION
+
+// MERGESORT FUNCTION
+int mergeSort(int main_array){
+  length_main = sizeof(main_array)/sizeof(main_array[0]);
+  // 1-element list
+  if (length_main == 1){
+    return main_array;
+  } // end if
+
+  // more than 1 element in the list
+  left_array[ceil(length_main/2)] = {0};
+  right_array[length_main - ceil(length_main/2)] = {0};
+  for (n = 0; n < ceil(length_main/2); n++){
+    left_array[n] = main_array[n];
+  } // end for
+  for (m = ceil(length_main/2); m < length_main; m++){
+    left_array[extra] = main_array[m];
+    extra += 1;
+  } // end for
+
+  // recursive part
+  left_array = mergeSort(left_array);
+  right_array = mergeSort(right_array);
+
+  return merge(left_array, right_array);
+
+} // END MERGESORT FUNCTION
 
 // END mergeSort
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

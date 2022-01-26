@@ -33,7 +33,7 @@
 # Librerías
 
 
-# VARIABLES UTILES
+# VARIABLES
 
 
 # MERGE FUNCTION
@@ -48,10 +48,10 @@ def merge(left_array, right_array):
             new.append(right_array[0])
             right_array = right_array[1:]
 
-    if 0 < len(left_array):
+    if 0 < len(left_array): # Last element, if len(main_array) was odd
         new += left_array
 
-    if 0 < len(right_array):
+    if 0 < len(right_array): # Last element, if len(main_array) was odd
         new += right_array
     return(new)
 
@@ -72,7 +72,7 @@ def mergeSort(main_array):
 
 #################
 
-numbers = [9,5,8,2,3]
+numbers = [1,2,3,4,5,6,7,8,9,4,4,4,4,4,4,4,4,4]
 print(mergeSort(numbers))
 
 
