@@ -31,7 +31,7 @@
 # PROGRAM mergeSort
 
 # Librerías
-
+import sys
 
 # VARIABLES
 
@@ -72,7 +72,7 @@ def mergeSort(main_array):
 
 #################
 
-numbers = [1,2,3,4,5,6,7,8,9,4,4,4,4,4,4,4,4,4]
+numbers = [6,9,7,8,4,9,6,6,6,6,5,7,5,5,1,6,4,9,7,1]
 print(mergeSort(numbers))
 
 
