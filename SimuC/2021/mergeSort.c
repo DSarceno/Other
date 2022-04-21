@@ -1,110 +1,77 @@
-//   2022-01-23
-//   mergeSort.c
-//   Diego Sarceño (dsarceno68@gmail.com)
+//	mié 20 abr 2022 18:30:27 CST
+//	mergeSort.c
+//	Diego Sarceno (dsarceno68@gmail.com)
 
-//   Módulo que contiene las funciones "MergeSort" y "Merge", con el fin de
-//   utilizar dicho método de ordenamiento en listas de vectores enteros.
+//	Funciones del algoritmo MERGE SORT
 
-//   Codificación del texto: UTF8
-//   Compiladores probados: GNU gcc (Ubuntu 20.04 Linux) 9.3.0
-//   Instrucciones de compilación: no requiere nada mas
-//   gcc -Wall -pedantic -std=c11 -c -o mergeSort.o mergeSort.c
-//   gcc -o mergeSort.x mergeSort.o -lm
+//	Codificado del texto: UTF8
+//	Compiladores probados: GNU gcc (Ubuntu 20.04 Linux) 9.3.0
+//	Instruciones de Compilacion: no requiere nada mas
+//	gcc -Wall -pedantic -std=c11 -c -o mergeSort.o mergeSort.c
+//	gcc -o mergeSort.x mergeSort.o
 
-//   Copyright (C) 2022
-//   D. R. Sarceño Ramírez
-//   dsarceno68@gmail.com
-
-//   This program is free software: you can redistribute it and/or
-//   modify it under the terms of the GNU General Public License as
-//   published by the Free Software Foundation, either version 3 of
-//   the License, or (at your option) any later version.
-
-//   This program is distributed in the hope that it will be useful,
-//   but WITHOUT ANY WARRANTY; without even the implied warranty of
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-//   General Public License for more details.
-
-
-//   You should have received a copy of the GNU General Public License
-//   along with this program.  If not, see
-//   <http://www.gnu.org/licenses/>.
-//PROGRAM mergeSort
+//	Librerias
 #include <stdio.h>
-#include <math.h>
 
-// VARIABLES
-int i = 0; // Left index
-int j = 0; // Right index
-int k = 0; // new array index
-int n; // mergeSort left index
-int m; // mergeSort right index
-int extra = 0;
-int length_left; // left array length
-int length_right; // right array length
-int length_main; // start
-int left_array; // left array in mergeSort function
-int right_array; // right array in mergeSort function
+void mergeSort(int main_array[], int start, int final);
+void merge(int array[], int start, int half, int final);
 
-// MERGE FUNCTION
-int merge(int la, int ra){ // Left and right array as entries
-  int length_left = sizeof(la)/sizeof(la[0]);
-  int length_right = sizeof(ra)/sizeof(ra[0]);
-  int new[length_left + length_right];
+int main(){
+  int lista[20] = {8,9,3,4,5,2,7,2,6,3,4,6,8,2,3,7,1,9,3,8};
+  int length = sizeof(lista)/sizeof(lista[0]);
+  mergeSort(lista,0,length);
 
-  while ((i < length_left) && (j < length_right)){
-    if (la[i] < ra[j]){
-      new[k] = la[i];
-      i += 1;
-    } else{
-      new[k] = ra[j];
-      j += 1;
-    } // end if
-    k += 1;
-  } // end while
+  for (int i = 0; i < length; i++){
+    printf("%d \n",lista[i]);
+  }
+  return 0;
+}
 
-  while (i < length_left){
-    new[k] = la[i];
-    i += 1;
-    k += 1;
-  } // end while
+void mergeSort(int main_array[], int start, int final){
+  int half;
+  half = (start + final)/2;
+  if (start < final){
+    mergeSort(main_array, start, half);
+    mergeSort(main_array, half + 1, final);
+    merge(main_array, start, half, final);
+  } // END IF
+} // END MERGESORT
 
-  while (j < length_right){
-    new[k] = ra[j];
-    j += 1;
-    k += 1;
-  } // end while
-  return new;
-} // END MERGE FUNCTION
+void merge(int array[], int start, int half, int final){
+  int aux[final + 1],i,j,k,t;
 
-// MERGESORT FUNCTION
-int mergeSort(int main_array){
-  length_main = sizeof(main_array)/sizeof(main_array[0]);
-  // 1-element list
-  if (length_main == 1){
-    return main_array;
-  } // end if
+  k = 0; // movimiento por la lista auxiliar
+  i = start; // movimiento por la sublista izquierda
+  j = half + 1; // movimiento por la sublista derecha
 
-  // more than 1 element in the list
-  left_array[ceil(length_main/2)] = {0};
-  right_array[length_main - ceil(length_main/2)] = {0};
-  for (n = 0; n < ceil(length_main/2); n++){
-    left_array[n] = main_array[n];
-  } // end for
-  for (m = ceil(length_main/2); m < length_main; m++){
-    left_array[extra] = main_array[m];
-    extra += 1;
-  } // end for
+  // ciclo para empezar a unir los arrays
+  while(i <= half && j <= final){
+    k++;
+    if (array[i] < array[j]){
+      aux[k] = array[i];
+      i++;
+    } else {
+      aux[k] = array[j];
+      j++;
+    } // END IF
+  } // END WHILE
 
-  // recursive part
-  left_array = mergeSort(left_array);
-  right_array = mergeSort(right_array);
+  // para los elementos sobrantes de alguna de las sublistas
+  for (t = i; t <= half; t++){
+    k++;
+    aux[k] = array[t];
+  } // END FOR
 
-  return merge(left_array, right_array);
+  for (t = j; t <= final; t++){
+    k++;
+    aux[k] = array[t];
+  } // END FOR
 
-} // END MERGESORT FUNCTION
-
-// END mergeSort
+  // regresar todo al vector original
+  for (t = 1; t <= k; t++){
+    array[start + t - 1] = aux[t];
+  } // END FOR
+} // END MERGE
 
 
 
@@ -122,10 +89,4 @@ int mergeSort(int main_array){
 
 
 
-
-
-
-
-
-
-//
+// asdfads
