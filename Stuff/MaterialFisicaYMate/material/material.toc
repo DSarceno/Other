@@ -1,0 +1,17 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Física}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Vectores}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Cinemática}{2}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}MRU}{2}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}MRUV}{2}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Movimiento Parabólico}{3}{subsubsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.3}Dinámica}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Trabajo, Energía y Momentum Lineal}{5}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Matemática}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Álgebra}{6}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Ecuaciones}{6}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Polinomios}{7}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Trigonometría}{7}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Triángulos y medición de Ángulos}{7}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}Geometría}{8}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Áreas Sombreadas}{8}{subsubsection.2.3.1}%
