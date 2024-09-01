@@ -8,12 +8,17 @@ import json
 
 class Notion:
     def __init__(self):
+        # cargamos el archivo de entorno con las api keys
+        load_dotenv()
+
         self.url_base = 'https://api.notion.com/v1/'
-        #self.notion_key = os.getenv('notion_key')
-        self.notion_key_roadmap = 'secret_yI1JxhCKI4byj8JqjVle7WUaXE5xAti7lctO4pBuRZ2'
-        self.notion_key_dieta = 'secret_DTt6rbP0ktgmVQe95E7UySiSIzxo3qzzitFEMbssugC'
+
+        # keys
+        self.notion_key_roadmap = os.getenv('notion_key_roadmap')
+        self.notion_key_dieta = os.getenv('notion_key_diet')
+        
+        # ids
         self.notion_parent_id_roadmap = '320b399c-2f3e-445f-bd71-adce0c2d9ebe'
-        #self.notion_database_id_dieta = 'a0b587a2-8f01-4e7a-8693-5ca2db02d655'
         self.notion_database_id_dieta = '1473c821-c23d-4090-b9f2-1cbe325c2264'
 
     
@@ -24,28 +29,16 @@ class Notion:
             "Notion-Version" : "2022-06-28"
         }
     
-
-    def topics(self):
-        try: 
-            # solicitamos la info a la pagina de notion
-            response = requests.get(self.url_base + f'blocks/{self.notion_parent_id_roadmap}/children')
-
-            # extraemos la info
-            learning = []
-            for topic in response['results']:
-                learning.append({
-                    "id": topic["id"],
-                    "title" : topic["properties"]["name"]["title"][0]["plain_text"]
-                })
-            return learning
-        except Exception as e:
-            print(e)
-            raise e
-    
-    
     def clean_indexed_line(self, line):
         # Elimina números, letras y puntos del indexado al principio de la línea
         return line[line.find('.') + 1:].strip()
+    
+
+    def split_text(self, text : str, max_length = 2000):
+        # dividimos el texto en bloques de maximo max_length caracteres
+        return [text[i:i + max_length] for i in range(0, len(text), max_length)]
+
+
 
     def format_roadmap(self, data : str) -> list:
         # dividimos el string en lineas
@@ -88,30 +81,50 @@ class Notion:
         # creamos el url
         url = self.url_base + f'blocks/{self.notion_parent_id_roadmap}/children'
 
-        # solicitamos la información
+        # realizamos la solicitud a la api
         response = requests.get(url, headers=self.headers(self.notion_key_roadmap))
 
+        # verificamos si la solicitud fue exitosa
         if response.status_code == 200:
-            blocks = response.json().get('results', [])
-
-            checklist_items = []
-            for block in blocks:
+            data = response.json()
+            topics = []
+            for block in data['results']:
                 if block['type'] == 'to_do':
-                    item = {
-                        'text' : block['to_do']['text'][0]['text']['content'],
-                        'checked' : block['to_do']['checked']
-                    }
-                    checklist_items.append(item)
-            
-            return checklist_items
+                    # verifica si el bloque contiene texto
+                    to_do_block = block.get('to_do', {})
+                    text_elements = to_do_block.get('rich_text', [])
+                    if text_elements:
+                        # extrae el texto del primer elemento
+                        plain_text = text_elements[0].get('plain_text', '')
+                        topics.append(plain_text)
+            return topics
         else:
-            print(f'Error: {response.status_code}')
+            return f'Error: {response.status_code}, {response.text}'
 
+
+    def structure(self):
+        # creamos el url
+        url = self.url_base + f'blocks/{self.notion_parent_id_roadmap}/children'
+
+        # realizamos la solicitud a la api
+        response = requests.get(url, headers=self.headers(self.notion_key_roadmap))
+
+        # verificamos si la solicitud fue exitosa
+        if response.status_code == 200:
+            data = response.json()
+            with open(r'/home/diego/Documents/Other/automatizations/' + 'learning.json', 'w') as file:
+                json.dump(data, file, indent=4)
+            file.close()
 
 
     
     def page_roadmap(self, title : str, data : str) -> None:
         # creamos la pagina nueva
+
+        # dividimos el texto en bloques de 2000 caracteres
+        text_blocks = self.split_text(data)
+
+        # formato de la informacion a mostrar en la pagina
         children_data = {
             "children" : [
 #                {
@@ -136,12 +149,12 @@ class Notion:
                             {
                                 "type" : "text",
                                 "text" : {
-                                    "content" : data
+                                    "content" : block
                                 }
                             }
                         ]
                     }
-                }
+                } for block in text_blocks
             ]
         }
 
@@ -166,17 +179,21 @@ class Notion:
         print('Inicio...')
         response = requests.post(new_page_url, headers=self.headers(self.notion_key_roadmap), data=json.dumps(new_page_data))
         print(f'Página de: {title} creada...')
-        #print(response.status_code)
-        #print(response.text)
+        #print(response.status_code, response.text)
+
         page_data = response.json()
         page_id = page_data.get('id')
-        print(page_id)
+        #print(page_id)
 
         
         print('Agregando info...')
         children_url = self.url_base + f'blocks/{page_id}/children'
-        #response = requests.patch(children_url, headers=self.headers, json=children_data)
-        response = requests.patch(children_url, headers=self.headers(self.notion_key_roadmap), json={"children" : self.format_roadmap(data)})
+        response = requests.patch(children_url, headers=self.headers(self.notion_key_roadmap), json=children_data)
+        #print(response.status_code, response.text)
+        #if formated == True:
+        #    response = requests.patch(children_url, headers=self.headers(self.notion_key_roadmap), json={"children" : self.format_roadmap(data)})
+        #else:
+        #response = requests.patch(children_url, headers=self.headers(self.notion_key_roadmap), json=children_data)
         print('Completado Correctamente!')
 
     
@@ -201,43 +218,15 @@ class Notion:
 
 
 if __name__ in "__main__":
-    url_pregunta = 'https://api.notion.com/v1/users'
-
-    title = 'Web Scraping con Selenium'
-    roadmap = '''
-    1. Introducción al Web Scraping
-        a. Definición y conceptos básicos
-        b. Importancia del web scraping en la era de big data
-
-    2. Fundamentos de Selenium
-        a. Qué es Selenium
-        b. Instalación y configuración
-        c. Tipos de pruebas que se pueden realizar con Selenium
-        d. Comandos y estructura básica de código
-
-    3. Interacción con elementos de la página
-        a. Localización de elementos
-        b. Interacción con inputs
-        c. Selección de elementos
-        d. Manejo de ventanas y pestañas
-        e. Esperas implícitas y explícitas
-
-    4. Extraindo datos con Selenium
-        a. Extracción de información de tablas y listas
-        b. Extracción de información de formularios
-        c. Simulación de acciones del usuario para obtener datos
-
-    5. Automatización de tareas con Selenium
-        a. Escenarios de automatización en web scraping
-        b. Creación de scripts para tareas recurrentes
-        c. Programación de tareas con cron
-    '''
-
-
     notion = Notion()       
     #notion.page_roadmap(title=title, data=roadmap)
-    info = notion.info_dieta()
-    with open(r'C:\Users\daalvarado\OneDrive - ine.gob.gt (1)\Documentos\diego_sarceño\temporalFiles\extras' + '\data_dieta.json', 'w') as file:
-        json.dump(info, file, indent=4)
-    file.close()
-    print(info)
+    #info = notion.info_dieta()
+    #with open(r'C:\Users\daalvarado\OneDrive - ine.gob.gt (1)\Documentos\diego_sarceño\temporalFiles\extras' + '\data_dieta.json', 'w') as file:
+    #    json.dump(info, file, indent=4)
+    #file.close()
+    #print(info)
+
+    #topics = notion.topics_learning()
+    #print(topics)
+
+    notion.structure()
