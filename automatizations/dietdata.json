@@ -1,0 +1,3298 @@
+{
+    "object": "list",
+    "results": [
+        {
+            "object": "page",
+            "id": "850d45fc-751f-47e6-ad6d-43ebf1ed8fe9",
+            "created_time": "2024-09-01T23:21:00.000Z",
+            "last_edited_time": "2024-09-01T23:22:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "un batido con 2 bananos 250ml de leche y 1 scoop de prote\u00edna (25g de prote\u00edna)",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "un batido con 2 bananos 250ml de leche y 1 scoop de prote\u00edna (25g de prote\u00edna)",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-09-01T18:00:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 28
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "dIX=",
+                        "name": "Refacci\u00f3n",
+                        "color": "orange"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "batido",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "batido",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/batido-850d45fc751f47e6ad6d43ebf1ed8fe9",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "fcd5a816-cd5c-42de-b3c1-db84fbe14e4f",
+            "created_time": "2024-09-01T23:18:00.000Z",
+            "last_edited_time": "2024-09-01T23:20:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1 lakimen  con 3 chorizos perri, 1 pedazo de pizza de pizza hut y 1 aguacate",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1 lakimen  con 3 chorizos perri, 1 pedazo de pizza de pizza hut y 1 aguacate",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-09-01T14:30:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 27
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "n?@c",
+                        "name": "Almuerzo",
+                        "color": "gray"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "almuerzo variado",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "almuerzo variado",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/almuerzo-variado-fcd5a816cd5c42deb3c1db84fbe14e4f",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "ede7a71b-cea9-4c2a-860e-f3718d373669",
+            "created_time": "2024-09-01T23:15:00.000Z",
+            "last_edited_time": "2024-09-01T23:18:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "2 huevos revueltos con 3 chorizos perri y 4 panqueques con jalea de fresa",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "2 huevos revueltos con 3 chorizos perri y 4 panqueques con jalea de fresa",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-09-01T08:30:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 26
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "OCTV",
+                        "name": "Desayuno",
+                        "color": "green"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "desayuno grande",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "desayuno grande",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/desayuno-grande-ede7a71bcea94c2a860ef3718d373669",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "73af810e-da10-49a7-be85-bf4cd8ce45ae",
+            "created_time": "2024-09-01T23:14:00.000Z",
+            "last_edited_time": "2024-09-01T23:15:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "una pierna de pollo picante una pechuga, 2 porciones de papas y una ensalada de repollo",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "una pierna de pollo picante una pechuga, 2 porciones de papas y una ensalada de repollo",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-31T18:00:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 25
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "ImVp",
+                        "name": "Cena",
+                        "color": "brown"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "pollo granjero",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "pollo granjero",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/pollo-granjero-73af810eda1049a7be85bf4cd8ce45ae",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "92fdaf74-12ea-4770-9857-80b04065956f",
+            "created_time": "2024-09-01T23:13:00.000Z",
+            "last_edited_time": "2024-09-01T23:14:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "250g de pasta de chao mein media zanahoria hervida y 100g de pollo",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "250g de pasta de chao mein media zanahoria hervida y 100g de pollo",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-31T13:30:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 24
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "n?@c",
+                        "name": "Almuerzo",
+                        "color": "gray"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "chao mein cacero",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "chao mein cacero",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/chao-mein-cacero-92fdaf7412ea4770985780b04065956f",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "c7df27cf-50ac-497b-ab2a-5fda905f8152",
+            "created_time": "2024-09-01T23:09:00.000Z",
+            "last_edited_time": "2024-09-01T23:13:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "6 tiras de tocino fritas, 1 huevo estrellado y un batido con 2 bananos 250ml de leche y 1 scoop de prote\u00edna (25g de prote\u00edna)",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "6 tiras de tocino fritas, 1 huevo estrellado y un batido con 2 bananos 250ml de leche y 1 scoop de prote\u00edna (25g de prote\u00edna)",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-31T08:00:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 23
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "OCTV",
+                        "name": "Desayuno",
+                        "color": "green"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "desayuno de tocino",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "desayuno de tocino",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/desayuno-de-tocino-c7df27cf50ac497bab2a5fda905f8152",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "39c0fc1b-2291-4db6-a4fe-5e9e84fc3d24",
+            "created_time": "2024-09-01T23:08:00.000Z",
+            "last_edited_time": "2024-09-01T23:09:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1 dalmata",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1 dalmata",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-30T08:50:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 22
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "dIX=",
+                        "name": "Refacci\u00f3n",
+                        "color": "orange"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "dalmata",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "dalmata",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/dalmata-39c0fc1b22914db6a4fe5e9e84fc3d24",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "05575345-3524-4679-a6e3-10bc2655d5e9",
+            "created_time": "2024-09-01T22:46:00.000Z",
+            "last_edited_time": "2024-09-01T23:08:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "5 alitas ba\u00f1adas en barbacoa y 5 camperitos empanizados de pollo campero.",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "5 alitas ba\u00f1adas en barbacoa y 5 camperitos empanizados de pollo campero.",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-30T08:50:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 21
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "ImVp",
+                        "name": "Cena",
+                        "color": "brown"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "cena camperitos",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "cena camperitos",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/cena-camperitos-0557534535244679a6e310bc2655d5e9",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "8b2389b2-87a3-437b-ba95-99fa12df5e1b",
+            "created_time": "2024-09-01T22:45:00.000Z",
+            "last_edited_time": "2024-09-01T22:46:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1 pizza de 12 pulgadas mitad carnitas con rabano y guacamol y la otra mitad con un poco de salchihca, chorizo y carne azada con guacamol y repollo cocido.",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1 pizza de 12 pulgadas mitad carnitas con rabano y guacamol y la otra mitad con un poco de salchihca, chorizo y carne azada con guacamol y repollo cocido.",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-30T13:40:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 20
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "n?@c",
+                        "name": "Almuerzo",
+                        "color": "gray"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "almuerzo pizza",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "almuerzo pizza",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/almuerzo-pizza-8b2389b287a3437bba9599fa12df5e1b",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "ea8eecfc-55bc-4263-8486-1d4b60ec827e",
+            "created_time": "2024-09-01T22:43:00.000Z",
+            "last_edited_time": "2024-09-01T22:44:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "2 huevos revueltos con 4 rodajas de jam\u00f3n",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "2 huevos revueltos con 4 rodajas de jam\u00f3n",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-30T07:20:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 19
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "OCTV",
+                        "name": "Desayuno",
+                        "color": "green"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "desayuno de 2 huevos",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "desayuno de 2 huevos",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/desayuno-de-2-huevos-ea8eecfc55bc426384861d4b60ec827e",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "fff93e08-0ea3-8097-86e9-d2f21921f326",
+            "created_time": "2024-08-30T03:53:00.000Z",
+            "last_edited_time": "2024-08-30T03:54:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1 laky men de vaso sabor a pollo con 2 huevos duros",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1 laky men de vaso sabor a pollo con 2 huevos duros",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-29T19:00:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 18
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "ImVp",
+                        "name": "Cena",
+                        "color": "brown"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "laky men",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "laky men",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/laky-men-fff93e080ea3809786e9d2f21921f326",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "13233b9a-7611-4c5e-8215-0567409288ac",
+            "created_time": "2024-08-30T03:51:00.000Z",
+            "last_edited_time": "2024-08-30T03:53:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "250g de pasta de chao mein media zanahoria hervida y 100g de pollo",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "250g de pasta de chao mein media zanahoria hervida y 100g de pollo",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-29T12:30:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 17
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "n?@c",
+                        "name": "Almuerzo",
+                        "color": "gray"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "chao mein cacero",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "chao mein cacero",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/chao-mein-cacero-13233b9a76114c5e82150567409288ac",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "6e5d7f8f-1d81-4055-a7bf-b679a91f53ea",
+            "created_time": "2024-08-30T03:50:00.000Z",
+            "last_edited_time": "2024-08-30T03:51:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1 pupusa de queso con 50g de repollo crudo, 2 cucharadas de salsa de tomate y 2 rodajas de zanahoria en escabeche",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1 pupusa de queso con 50g de repollo crudo, 2 cucharadas de salsa de tomate y 2 rodajas de zanahoria en escabeche",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-29T10:30:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 16
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "dIX=",
+                        "name": "Refacci\u00f3n",
+                        "color": "orange"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "pupusas",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "pupusas",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/pupusas-6e5d7f8f1d814055a7bfb679a91f53ea",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "fff93e08-0ea3-80f3-ab40-d85fa62e9a58",
+            "created_time": "2024-08-30T03:50:00.000Z",
+            "last_edited_time": "2024-08-30T03:50:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "2 huevos estrellados con 2 rodajas de jam\u00f3n y 400ml de incaparina",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "2 huevos estrellados con 2 rodajas de jam\u00f3n y 400ml de incaparina",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-29T07:30:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 15
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "OCTV",
+                        "name": "Desayuno",
+                        "color": "green"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "desayuno tradicional de 2 huevos",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "desayuno tradicional de 2 huevos",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/desayuno-tradicional-de-2-huevos-fff93e080ea380f3ab40d85fa62e9a58",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "957c65f1-8bff-42b1-b64c-227f5a8789dc",
+            "created_time": "2024-08-30T03:49:00.000Z",
+            "last_edited_time": "2024-08-30T03:50:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "250ml de leche descremada con 1 scoop de prote\u00edna whey (25g de proteina por scoop)",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "250ml de leche descremada con 1 scoop de prote\u00edna whey (25g de proteina por scoop)",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-28T19:00:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 14
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "dIX=",
+                        "name": "Refacci\u00f3n",
+                        "color": "orange"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "shake de prote\u00edna",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "shake de prote\u00edna",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/shake-de-prote-na-957c65f18bff42b1b64c227f5a8789dc",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "82fe4b79-1218-4174-b788-f6910a34c0f3",
+            "created_time": "2024-08-30T03:48:00.000Z",
+            "last_edited_time": "2024-08-30T03:49:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "7 mini roscas de churros fritas con azucar",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "7 mini roscas de churros fritas con azucar",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-28T17:00:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 13
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "dIX=",
+                        "name": "Refacci\u00f3n",
+                        "color": "orange"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "churros",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "churros",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/churros-82fe4b7912184174b788f6910a34c0f3",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "46c81806-adac-4523-a5d1-ce3aeb837c60",
+            "created_time": "2024-08-30T03:46:00.000Z",
+            "last_edited_time": "2024-08-30T03:48:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1 menu de triple bacon con mc patatas y 2 vasos de coca cola tradicional de 650ml",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1 menu de triple bacon con mc patatas y 2 vasos de coca cola tradicional de 650ml",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-28T13:00:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 12
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "n?@c",
+                        "name": "Almuerzo",
+                        "color": "gray"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "menu mcdonalds",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "menu mcdonalds",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/menu-mcdonalds-46c81806adac4523a5d1ce3aeb837c60",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "150eb6e6-7dc6-4a9e-bcf5-c78a547223aa",
+            "created_time": "2024-08-30T03:45:00.000Z",
+            "last_edited_time": "2024-08-30T03:46:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "pan de shuco (guatemalteco), 2 salchichas, 1 cucharada de guacamol, 2 de repollo hervido, y cucharada de ketsup y 1 de mayonesa",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "pan de shuco (guatemalteco), 2 salchichas, 1 cucharada de guacamol, 2 de repollo hervido, y cucharada de ketsup y 1 de mayonesa",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-28T09:40:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 11
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "dIX=",
+                        "name": "Refacci\u00f3n",
+                        "color": "orange"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1 shuco de salchicha",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": true,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1 shuco de salchicha",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/1-shuco-de-salchicha-150eb6e67dc64a9ebcf5c78a547223aa",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "6a8f93cd-0ae5-48a5-ade5-67aed6fc9f2c",
+            "created_time": "2024-08-30T03:44:00.000Z",
+            "last_edited_time": "2024-08-30T03:54:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "2 huevos con cebollin y 100 gramos de frijoles cocidos",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "2 huevos con cebollin y 100 gramos de frijoles cocidos",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-28T07:20:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 10
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "OCTV",
+                        "name": "Desayuno",
+                        "color": "green"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "desayuno normal de 2 huevos",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "desayuno normal de 2 huevos",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/desayuno-normal-de-2-huevos-6a8f93cd0ae548a5ade567aed6fc9f2c",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "3090c607-0cd4-4942-a418-90849d309a4b",
+            "created_time": "2024-08-28T04:43:00.000Z",
+            "last_edited_time": "2024-08-28T04:44:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1 cuadril mediano y 1 pierna mediana de pollo ahumado y 8 papas baby fritas en mantequilla de ajo.",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1 cuadril mediano y 1 pierna mediana de pollo ahumado y 8 papas baby fritas en mantequilla de ajo.",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-27T20:20:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 8
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "ImVp",
+                        "name": "Cena",
+                        "color": "brown"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "Pollo con papas baby",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "Pollo con papas baby",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/Pollo-con-papas-baby-3090c6070cd44942a41890849d309a4b",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "5423aaf2-9674-4fb7-bf0d-9cc254e69b21",
+            "created_time": "2024-08-28T04:41:00.000Z",
+            "last_edited_time": "2024-08-28T04:43:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1 Burrito con carne, queso y papa acompa\u00f1ado de papas fritas y 1 vaso de pepsi",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1 Burrito con carne, queso y papa acompa\u00f1ado de papas fritas y 1 vaso de pepsi",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-27T17:15:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 7
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "dIX=",
+                        "name": "Refacci\u00f3n",
+                        "color": "orange"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "Menu de Full Bag de burrito en taco bell",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "Menu de Full Bag de burrito en taco bell",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/Menu-de-Full-Bag-de-burrito-en-taco-bell-5423aaf296744fb7bf0d9cc254e69b21",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "ae43f7ff-e006-426f-8a5d-9c9f7585f130",
+            "created_time": "2024-08-28T04:38:00.000Z",
+            "last_edited_time": "2024-08-28T04:41:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "130 gramos de carne de cerdo adobada, 100 gramos de carne lomo de cerdo empanizado, 7 papas baby fritas con mantequilla de ajo, media taza de arroz precocido y 1 aguacate. Acompa\u00f1ado de jugo natural",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "130 gramos de carne de cerdo adobada, 100 gramos de carne lomo de cerdo empanizado, 7 papas baby fritas con mantequilla de ajo, media taza de arroz precocido y 1 aguacate. Acompa\u00f1ado de jugo natural",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-27T13:00:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 6
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "n?@c",
+                        "name": "Almuerzo",
+                        "color": "gray"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "Carne adobada y cerdo empanizado",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "Carne adobada y cerdo empanizado",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/Carne-adobada-y-cerdo-empanizado-ae43f7ffe006426f8a5d9c9f7585f130",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "dec7a98f-5838-4c96-bd35-2ee12beff592",
+            "created_time": "2024-08-28T04:37:00.000Z",
+            "last_edited_time": "2024-08-28T04:38:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "pan de shuco (guatemalteco), 2 salchichas, 1 cucharada de guacamol, 2 de repollo hervido, y cucharada de ketsup y 1 de mayonesa",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "pan de shuco (guatemalteco), 2 salchichas, 1 cucharada de guacamol, 2 de repollo hervido, y cucharada de ketsup y 1 de mayonesa",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-27T10:00:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 5
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "dIX=",
+                        "name": "Refacci\u00f3n",
+                        "color": "orange"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1 shuco de salchicha",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1 shuco de salchicha",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/1-shuco-de-salchicha-dec7a98f58384c96bd352ee12beff592",
+            "public_url": null
+        },
+        {
+            "object": "page",
+            "id": "e39242a1-ad5a-478f-a3cb-1a0b884d8ae3",
+            "created_time": "2024-08-28T04:34:00.000Z",
+            "last_edited_time": "2024-08-28T19:56:00.000Z",
+            "created_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "last_edited_by": {
+                "object": "user",
+                "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
+            },
+            "cover": null,
+            "icon": null,
+            "parent": {
+                "type": "database_id",
+                "database_id": "1473c821-c23d-4090-b9f2-1cbe325c2264"
+            },
+            "archived": false,
+            "in_trash": false,
+            "properties": {
+                "Objetivos": {
+                    "id": "C%60DO",
+                    "type": "select",
+                    "select": null
+                },
+                "Observaciones": {
+                    "id": "EYGj",
+                    "type": "rich_text",
+                    "rich_text": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "1 taza de incaparina, 2 huevos y 1 vaso de jamaica natural",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "1 taza de incaparina, 2 huevos y 1 vaso de jamaica natural",
+                            "href": null
+                        }
+                    ]
+                },
+                "Estado Dieta": {
+                    "id": "HfBy",
+                    "type": "select",
+                    "select": {
+                        "id": ":t<~",
+                        "name": "Bulk",
+                        "color": "purple"
+                    }
+                },
+                "Proteina (Gramos)": {
+                    "id": "JKyi",
+                    "type": "number",
+                    "number": null
+                },
+                "Fibra": {
+                    "id": "Jsj%5B",
+                    "type": "number",
+                    "number": null
+                },
+                "Calorias": {
+                    "id": "J%7Bsd",
+                    "type": "number",
+                    "number": null
+                },
+                "Fecha": {
+                    "id": "QA%3Bm",
+                    "type": "date",
+                    "date": {
+                        "start": "2024-08-27T07:15:00.000-06:00",
+                        "end": null,
+                        "time_zone": null
+                    }
+                },
+                "ID": {
+                    "id": "aVkx",
+                    "type": "unique_id",
+                    "unique_id": {
+                        "prefix": "TC",
+                        "number": 4
+                    }
+                },
+                "Carbohidratos (Gramos)": {
+                    "id": "i%3CWQ",
+                    "type": "number",
+                    "number": null
+                },
+                "Grasas (Gramos)": {
+                    "id": "plnd",
+                    "type": "number",
+                    "number": null
+                },
+                "Tiempo de Comida": {
+                    "id": "v%3E%3CM",
+                    "type": "select",
+                    "select": {
+                        "id": "OCTV",
+                        "name": "Desayuno",
+                        "color": "green"
+                    }
+                },
+                "Comida": {
+                    "id": "title",
+                    "type": "title",
+                    "title": [
+                        {
+                            "type": "text",
+                            "text": {
+                                "content": "Desayuno normal de 2 huevos",
+                                "link": null
+                            },
+                            "annotations": {
+                                "bold": false,
+                                "italic": false,
+                                "strikethrough": false,
+                                "underline": false,
+                                "code": false,
+                                "color": "default"
+                            },
+                            "plain_text": "Desayuno normal de 2 huevos",
+                            "href": null
+                        }
+                    ]
+                }
+            },
+            "url": "https://www.notion.so/Desayuno-normal-de-2-huevos-e39242a1ad5a478fa3cb1a0b884d8ae3",
+            "public_url": null
+        }
+    ],
+    "next_cursor": null,
+    "has_more": false,
+    "type": "page_or_database",
+    "page_or_database": {},
+    "request_id": "edaa35c6-a529-4c18-8b0e-fcadcccfb8fd"
+}

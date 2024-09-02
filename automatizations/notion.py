@@ -229,4 +229,7 @@ if __name__ in "__main__":
     #topics = notion.topics_learning()
     #print(topics)
 
-    notion.structure()
+    data = notion.info_dieta()
+    with open('automatizations/' + 'dietdata.json', 'w') as file:
+        json.dump(data, file, indent=4)
+    file.close()
