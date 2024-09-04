@@ -5,7 +5,7 @@
             "object": "page",
             "id": "850d45fc-751f-47e6-ad6d-43ebf1ed8fe9",
             "created_time": "2024-09-01T23:21:00.000Z",
-            "last_edited_time": "2024-09-01T23:22:00.000Z",
+            "last_edited_time": "2024-09-02T15:19:00.000Z",
             "created_by": {
                 "object": "user",
                 "id": "35e009eb-76d3-4ea6-8d93-24c35ba80328"
@@ -35,7 +35,7 @@
                         {
                             "type": "text",
                             "text": {
-                                "content": "un batido con 2 bananos 250ml de leche y 1 scoop de prote\u00edna (25g de prote\u00edna)",
+                                "content": "un batido con 2 bananos, 250ml de leche y 1 scoop de prote\u00edna (25g de prote\u00edna)",
                                 "link": null
                             },
                             "annotations": {
@@ -46,7 +46,7 @@
                                 "code": false,
                                 "color": "default"
                             },
-                            "plain_text": "un batido con 2 bananos 250ml de leche y 1 scoop de prote\u00edna (25g de prote\u00edna)",
+                            "plain_text": "un batido con 2 bananos, 250ml de leche y 1 scoop de prote\u00edna (25g de prote\u00edna)",
                             "href": null
                         }
                     ]
@@ -65,12 +65,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -202,12 +202,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -339,12 +339,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -476,12 +476,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -613,12 +613,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -750,12 +750,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -887,12 +887,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -1024,12 +1024,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -1161,12 +1161,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -1298,12 +1298,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -1435,12 +1435,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -1572,12 +1572,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -1709,12 +1709,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -1846,12 +1846,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -1983,12 +1983,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -2120,12 +2120,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -2257,12 +2257,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -2394,12 +2394,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -2531,12 +2531,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -2668,12 +2668,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -2805,12 +2805,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -2942,12 +2942,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -3079,12 +3079,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -3216,12 +3216,12 @@
                     "type": "number",
                     "number": null
                 },
-                "Fibra": {
+                "Fibra (gramos)": {
                     "id": "Jsj%5B",
                     "type": "number",
                     "number": null
                 },
-                "Calorias": {
+                "Calorias (kcal)": {
                     "id": "J%7Bsd",
                     "type": "number",
                     "number": null
@@ -3294,5 +3294,5 @@
     "has_more": false,
     "type": "page_or_database",
     "page_or_database": {},
-    "request_id": "edaa35c6-a529-4c18-8b0e-fcadcccfb8fd"
+    "request_id": "5dced90b-4b26-4c1a-81aa-241f53f8224c"
 }
