@@ -82,6 +82,7 @@ class Notion:
         url = self.url_base + f'blocks/{self.notion_parent_id_roadmap}/children'
 
         # realizamos la solicitud a la api
+        print('Extrayendo información de la Página Learning en Notion...')
         response = requests.get(url, headers=self.headers(self.notion_key_roadmap))
 
         # verificamos si la solicitud fue exitosa
@@ -97,6 +98,7 @@ class Notion:
                         # extrae el texto del primer elemento
                         plain_text = text_elements[0].get('plain_text', '')
                         topics.append(plain_text)
+            print('Solicitud de informacion exitosa...')
             return topics
         else:
             return f'Error: {response.status_code}, {response.text}'

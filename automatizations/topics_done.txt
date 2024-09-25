@@ -1,5 +1,11 @@
 Web Scrapping (Beautiful Soup, Selenium y Request)
-Automatización con Python
 Make (Automation Software)
 Geant4
 Computer Vision con TensorFlow
+Lenguaje mAutomatizacion con Python
+Google Cloud Professional Machine Learning Engineer
+Google Cloud Professional Data Engineer
+Deep Learning con PyTorch
+Automatizacion con Python
+Lenguaje m
+Métodos Monte Carlo, aplicaciones y ejemplos
