@@ -1,0 +1,7 @@
+data: 
+  footballdata_xlsx: "data/football-data.xlsx"
+  footballdata_csv: "data/football-data.csv"
+model:
+  type: "RandomForest"
+  n_estimators: 1000
+  random_state: 42
