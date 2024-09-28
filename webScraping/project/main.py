@@ -10,14 +10,19 @@ def main() -> None:
 
 
     # instanciamos la clase
-    fbd = footballData()
+    fbd = footballData(all=True)
 
     ### ejecutamos los metodos ###
     # traemos los links
+    print('Extrayendo los links de la página...')
     links = fbd.getLinks()
+    print('Links extraídos exitosamente...')
+    print(links)
     # traemos la data
+    print('Extrayendo la data...')
     data = fbd.getData(links = links, df_name=config['data']['footballdata_xlsx'])
-
+    print('Data extraída exitosamente...')
+    print(data.info())
 
 
 if __name__ == "__main__":

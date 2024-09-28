@@ -31,9 +31,8 @@ class footballData:
         useful_links = []
 
         # dependiendo si necesitamos toda la data o solo la de la ultima temporada
-        if all == True:
+        if self.all == True:
             pattern = 'all-euro-data'
-
         else:
             today = datetime.today()
             pattern = f'all-euro-data-{today.year}-{today.year + 1}'

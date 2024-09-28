@@ -1,2 +1,5 @@
 # Ocultamos información Sensible
 .env
+
+# quitamos el pycache
+src/__pycache__
