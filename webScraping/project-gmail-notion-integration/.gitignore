@@ -1,0 +1,3 @@
+# quitamos información sensible
+.env
+credentials.json
