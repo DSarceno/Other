@@ -85,6 +85,23 @@ class openaiGPT:
         except Exception as e:
             print(f'Error: {e}')
         print('Reporte generado...')
+    
+    def general_chat(self, prompt : str, model : str = "gpt-3.5-turbo-instruct", max_tokens : int = 500, \
+                    n_respuestas : int = 1, temperature : float = 0.5) -> str:
+        try:
+            completion = self.client.completions.create(
+                model=model,
+                prompt=prompt,
+                max_tokens=max_tokens,
+                n=n_respuestas,
+                stop=None,
+                temperature=temperature
+            )
+            response = completion.choices[0].text
+            return response
+        except Exception as e:
+            print(f'Error: {e}')
+        
 
 
 if __name__ == "__main__":
