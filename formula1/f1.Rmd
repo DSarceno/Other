@@ -1,0 +1,216 @@
+---
+title: "formula1"
+author: "Diego Sarceño"
+date: "2024-06-27"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# paquetes
+
+
+```{r}
+library(paquete)
+carga_paquetes()
+```
+
+
+```{r}
+'%notin%' <- function(element, list_elements) {
+  !(element %in% list_elements)
+}
+```
+
+
+
+
+
+# FORMULA 1
+
+```{r}
+circuits <- read_csv('formula1/circuits.csv')
+constructor_results <- read_csv('formula1/constructor_results.csv')
+constructor_standings <- read_csv('formula1/constructor_standings.csv')
+constructors <- read_csv('formula1/constructors.csv')
+driver_standings <- read_csv('formula1/driver_standings.csv')
+drivers <- read_csv('formula1/drivers.csv')
+lap_times <- read_csv('formula1/lap_times.csv')
+pit_stops <- read_csv('formula1/pit_stops.csv')
+qualifying <- read_csv('formula1/qualifying.csv')
+races <- read_csv('formula1/races.csv')
+results <- read_csv('formula1/results.csv')
+seasons <- read_csv('formula1/seasons.csv')
+sprint_results <- read_csv('formula1/sprint_results.csv')
+status <- read_csv('formula1/status.csv')
+```
+
+
+
+
+## CIRCUITOS
+
+```{r}
+circuits
+```
+
+
+```{r}
+leaflet(data = circuits) %>% 
+  addTiles() %>% 
+  addMarkers(~lng, ~lat, popup = ~location)
+```
+
+
+
+## CONSTRUCTORES
+
+
+```{r}
+constructors
+```
+
+
+## SEASONS
+
+```{r}
+races
+```
+
+
+```{r}
+results1 <- left_join(results, races[, c('raceId', 'year', 'round', 'name')], by = 'raceId')
+results2 <- left_join(results1, drivers[, c('driverId' , 'driverRef')], by = 'driverId')
+results3 <- left_join(results2, constructors[, c('constructorId', 'name')], by = 'constructorId')
+results4 <- left_join(results3, status, by = 'statusId')
+resultados <- results4
+```
+
+
+```{r}
+resultados <- resultados[, !names(resultados) %in% c('resultId', 'raceId', 'driverId', 'constructorId', 'statusId')]
+```
+
+
+```{r}
+write.xlsx(resultados, "resultados.xlsx")
+```
+
+
+```{r}
+resultados
+```
+
+
+```{r}
+resultados <- resultados %>% 
+  rename(
+    grand_prix = name.x,
+    constructor = name.y
+  )
+```
+
+```{r}
+resultados
+```
+
+
+
+
+
+```{r}
+max_dnfs <- resultados[resultados$driverRef == 'max_verstappen' & resultados$status != 'Finished', c('position', 'driverRef', 'status')]
+```
+
+
+```{r}
+dnfs <- max_dnfs %>%
+  group_by(status) %>%
+  summarise(n = n())
+```
+
+```{r}
+dnfs
+```
+
+
+```{r}
+p <- ggplot(data = dnfs, aes(x = status, y = n)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(title = "Conteo de status", x = "Status", y = "Número de ocurrencias") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+```
+
+
+```{r}
+p
+```
+
+
+
+
+
+```{r}
+resultados[resultados$driverRef == 'max_verstappen' & resultados$points == 0 & resultados$status %notin% c('+1 Lap', 'Finished'),]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+########
