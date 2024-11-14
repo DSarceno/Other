@@ -1,0 +1,19 @@
+---
+title: "nba"
+author: "Diego Sarceño"
+date: "2024-07-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(paquete)
+carga_paquetes()
+```
+
+
+
