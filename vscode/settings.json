@@ -1,0 +1,71 @@
+{
+  "mssql.connections": [
+    {
+      "server": "10.0.0.12",
+      "database": "master",
+      "authenticationType": "SqlLogin",
+      "user": "dalvarado",
+      "password": "",
+      "emptyPasswordInput": false,
+      "savePassword": true,
+      "profileName": "B12",
+      "encrypt": "Mandatory",
+      "trustServerCertificate": true,
+      "connectTimeout": 15,
+      "commandTimeout": 30,
+      "applicationName": "vscode-mssql"
+    },
+    {
+      "server": "10.0.0.153",
+      "database": "master",
+      "authenticationType": "SqlLogin",
+      "user": "daalvarado",
+      "password": "",
+      "emptyPasswordInput": false,
+      "savePassword": true,
+      "profileName": "B153",
+      "encrypt": "Mandatory",
+      "trustServerCertificate": true,
+      "connectTimeout": 15,
+      "commandTimeout": 30,
+      "applicationName": "vscode-mssql"
+    }
+  ],
+  "mssql.objectExplorer.groupBySchema": false,
+  "window.zoomLevel": 1,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "workbench.sideBar.location": "right",
+  "workbench.editor.showTabs": "single",
+  "editor.scrollbar.vertical": "auto",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": false,
+  "editor.formatOnSave": true,
+  "editor.guides.indentation": false,
+  "indenticator.width": 0.1,
+  "indenticator.color.dark": "rgba(255,255,255,0.1)",
+  "workbench.activityBar.location": "bottom",
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt"
+  ],
+  "julia.symbolCacheDownload": true,
+  "julia.enableTelemetry": true,
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "extensions.ignoreRecommendations": true,
+  "editor.matchBrackets": false,
+  "breadcrumbs.enabled": false,
+  "editor.glyphMargin": false,
+  "workbench.statusBar.visible": false,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "material-icon-theme.folders.associations": {
+    "supervision": "project",
+    "misc": "scripts",
+    "cedulasupervision": "tools",
+    "train": "target",
+    "outliers": "Wakatime"
+  },
+  "python.createEnvironment.trigger": "off"
+}
