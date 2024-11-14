@@ -1,0 +1,362 @@
+---
+title: "Tukey Outliers"
+author: "Fernando Sáenz"
+date: "2024-06-06"
+output: pdf_document
+---
+Librerías
+
+```{r message=FALSE, warning=FALSE}
+# manejo de datos 
+library(dplyr)
+library(tidyr)
+library(haven)
+library(readxl)
+library(openxlsx)
+library(writexl)
+library(ggplot2)
+library(igraph)
+
+# SQL
+library(DBI)
+library(odbc)
+```
+
+Conexión a la base de datos
+
+```{r}
+# Credenciales
+server <- "ipcprod.database.windows.net"
+user <- "ipcreader"
+pas <- "1pc/*2023"
+database <- "db-indices"
+```
+
+
+```{r}
+# Crea un string completo para conectarse a la base de datos
+conn_str <- paste0(
+  "Driver={ODBC Driver 18 for SQL Server};",
+  "Server=", server, ";",
+  "Database=", database, ";",
+  "Uid=", user, ";",
+  "Pwd=", pas, ";"
+  )
+
+# Conexion a la base de datos
+conexion <- dbConnect(odbc::odbc(), .connection_string=conn_str)
+
+# Limpiesa del environment
+rm(server,
+   user,
+   pas, 
+   database,
+   conn_str)
+
+```
+
+Extracción de precios
+
+```{sql connection=conexion, output.var="recolectados_junio_24"}
+
+-- Store procedures precios recolectados (año, mes)
+
+EXEC [dbo].[sp_get_calculos_precios_recolectados_mes] 2024, 6
+
+```
+
+Extracción de los datos a utilizar
+
+```{r}
+boletas <- recolectados_junio_24[, c(2, 3, 4, 5, 9, 
+                                     11, 12, 16, 18, 21, 
+                                     22, 24, 25, 26, 27, 
+                                     28, 29, 32, 35, 39, 
+                                     42, 64)]
+
+boletas <- arrange(boletas, articulo) %>%
+  filter(estado_boleta  %in% c("Validada", "Imputada")) %>%
+  filter(estado_fuente %in% c("Validada", "Imputada")) %>%
+  filter(estado_registro %in% c("Validada", "Imputada"))
+```
+
+Corrección de novedades técnicas
+
+```{r}
+boletas <- boletas %>%
+  group_by(articulo) %>%
+  mutate(precio_actual = case_when(nt_tipo_nombre == "Periodo de espera" ~ mean(precio_actual, na.rm = TRUE), 
+                                   # imputar con el promedio de precios por artículo 
+                                   nt_tipo_nombre == "Cambio de referencia" ~ precio_anterior,  
+                                   # Utilizar el precio anterior
+                                   TRUE ~ precio_actual  
+                                   # No hacer cambios en otros casos
+                                 )) %>%
+  mutate(cantidad_actual = case_when(nt_tipo_nombre == "Periodo de espera" ~ mean(cantidad_actual, na.rm = TRUE),  
+                                     # Imputar con el promedio de cantidades por artículo 
+                                     nt_tipo_nombre == "Cambio de referencia" ~ cantidad_anterior,  
+                                     # Utilizar la cantidad anterior
+                                     TRUE ~ cantidad_actual  
+                                     # No hacer cambios en otros casos
+                                 )) %>%
+  ungroup()
+```
+
+Corrección de precios a unidad base
+
+```{r}
+boletas <- boletas %>%
+  mutate(precio_actual = ifelse(cantidad_actual == 0, precio_anterior, cantidad_base * precio_actual/cantidad_actual)) %>%
+  mutate(precio_anterior = ifelse(precio_anterior == 0, precio_anterior, cantidad_base * precio_anterior/cantidad_anterior)) %>%
+  mutate(cantidad_actual = ifelse(cantidad_actual == 0, cantidad_actual, cantidad_base)) %>%
+  mutate(cantidad_anterior = ifelse(precio_anterior == 0, cantidad_anterior, cantidad_base)) %>%
+  mutate(variacion_precio_anterior = ifelse(precio_anterior == 0, 1, precio_actual/precio_anterior)) %>%
+  mutate(variacion_porcentual = variacion_precio_anterior * 100 - 100)
+```
+
+Metodo de Tukey
+
+```{r}
+Tukey <- function(boletas, c = 2.5) {
+  boletas_art_0 <- boletas %>%
+    filter(variacion_precio_anterior != 1)
+  
+  low <- quantile(boletas_art_0$variacion_precio_anterior, 0.05)
+  high <- quantile(boletas_art_0$variacion_precio_anterior, 0.95)
+  
+  datos <- boletas_art_0 %>%
+    filter(variacion_precio_anterior >= low & variacion_precio_anterior <= high)
+  
+  mediana <- quantile(datos$variacion_precio_anterior, 0.5)
+  media <- mean(datos$variacion_precio_anterior)
+  
+  mediasup <- mean(datos$variacion_precio_anterior[datos$variacion_precio_anterior > mediana])
+  mediainf <- mean(datos$variacion_precio_anterior[datos$variacion_precio_anterior < mediana])
+  
+  xinf <- media - mediainf
+  xsup <- mediasup - media
+  
+  x_sup <- media + c * xsup
+  x_inf <- media - c * xinf
+  
+  outliers <- datos %>%
+    filter(variacion_precio_anterior < x_inf | variacion_precio_anterior > x_sup) %>%
+    mutate(tukey_regional = 1)
+ 
+ return(outliers)
+}
+```
+
+Verificación del tamaño de la muestra (Warning)
+
+```{r}
+verify_sample_size <- function(boletas, min_size = 30) {
+  sample_sizes <- boletas %>%
+    group_by(articulo, region) %>%
+    summarise(count = n(), .groups = 'drop')
+  
+  insufficient_samples <- sample_sizes %>%
+    filter(count < min_size)
+  
+  if (nrow(insufficient_samples) > 0) {
+    return(insufficient_samples)
+  }else{
+    return(NULL)
+  }
+}
+
+warning <- verify_sample_size(boletas)
+if(!is.null(warning)){
+  print(warning)
+}else{
+  print("El tamaño de la muestra para todos los grupos de artículos y regiones es adecuado")
+}
+```
+
+Análisis por región
+
+```{r}
+outliers <- function(boletas) {
+  outliers <- boletas %>%
+    group_by(articulo, region) %>%
+    group_modify(~Tukey(.x)) %>%
+    ungroup()
+  return(outliers)
+}
+
+outliers <- outliers(boletas)
+```
+
+ANOVA
+
+```{r}
+boletas$region <- as.factor(boletas$region)
+boletas$articulo <- as.factor(boletas$articulo)
+boletas$variacion_precio_anterior <- as.numeric(boletas$variacion_precio_anterior)
+
+# Función para realizar ANOVA y extraer los resultados
+anova_results <- function(data) {
+  modelo <- aov(variacion_precio_anterior ~ region, data = data)
+  summary_model <- summary(modelo)
+  p_value <- summary_model[[1]][["Pr(>F)"]][1]
+  f_value <- summary_model[[1]][["F value"]][1]
+  return(c(f_value, p_value))
+}
+
+# Crear dataframe para almacenar resultados
+resultados_anova_df <- data.frame(
+  articulo = character(),
+  f_value = numeric(),
+  p_value = numeric(),
+  stringsAsFactors = FALSE
+)
+
+# Realizar ANOVA para cada artículo y almacenar los resultados
+for (articulo in unique(boletas$articulo)) {
+  datos_articulo <- boletas[boletas$articulo == articulo,]
+
+    # Verificar si hay al menos dos niveles en la variable region
+  if (length(unique(datos_articulo$region)) > 1) {
+    anova_result <- anova_results(datos_articulo)
+      
+    if (is.null(anova_result)) {
+      # Si anova_result es NULL, agregar NA a los resultados
+      resultados_anova_df <- rbind(resultados_anova_df, data.frame(
+        articulo = articulo,
+        f_value = NA,
+        p_value = NA,
+        stringsAsFactors = FALSE
+      ))
+  } else {
+    
+    resultados_anova_df <- rbind(resultados_anova_df, data.frame(
+      articulo = articulo,
+      f_value = anova_result[1],
+      p_value = anova_result[2],
+      stringsAsFactors = FALSE
+    ))
+    
+    }
+  } else {
+    # Si no hay suficientes niveles, agregar NA a los resultados
+    resultados_anova_df <- rbind(resultados_anova_df, data.frame(
+      articulo = articulo,
+      f_value = 1,
+      p_value = 1,
+      stringsAsFactors = FALSE
+    ))
+  }
+}
+
+boletas$region <- as.integer(boletas$region)
+boletas$articulo <- as.character(boletas$articulo)
+
+articulos_nacional <- resultados_anova_df$articulo[resultados_anova_df$p_value > 0.05]
+```
+
+Análisis a nivel nacional
+
+```{r}
+outliersN <- function(boletas) {
+  outliers <- boletas %>%
+    filter(articulo %in% articulos_nacional) %>%
+    group_by(articulo) %>%
+    group_modify(~Tukey(.x)) %>%
+    ungroup()
+  return(outliers)
+}
+
+outliersN <- outliersN(boletas)
+outliersN <- outliersN %>%
+  rename(tukey_nacional = tukey_regional)
+```
+
+Descargar en excel
+
+```{r}
+final <- left_join(boletas, outliers)
+final <- left_join(final, outliersN)
+final <- final %>%
+  mutate(tukey_regional = ifelse(is.na(tukey_regional), 0, tukey_regional)) %>%
+  mutate(tukey_nacional = ifelse(is.na(tukey_nacional), 0, tukey_nacional))
+  
+write_xlsx(final, path = "Tukey.xlsx")
+```
+
+
+##IGNORAR EL RESTO
+
+Prueba post Hoc
+
+```{r}
+# Función para realizar Tukey HSD y extraer resultados
+tukey_results <- function(data) {
+  modelo <- aov(variacion_precio_anterior ~ region, data = data)
+  tukey_model <- TukeyHSD(modelo)
+  tukey_df <- as.data.frame(tukey_model$region)
+  tukey_df$comparison <- rownames(tukey_df)
+  return(tukey_df)
+}
+
+# Crear dataframe para almacenar resultados de Tukey
+resultados_tukey_df <- data.frame(
+  articulo = character(),
+  comparison = character(),
+  diff = numeric(),
+  lwr = numeric(),
+  upr = numeric(),
+  p_adj = numeric(),
+  stringsAsFactors = FALSE
+)
+
+# Realizar Tukey HSD para artículos con diferencias significativas
+for (articulo in resultados_anova_df$articulo[resultados_anova_df$p_value < 0.05]) {
+  datos_articulo <- boletas %>% filter(articulo == articulo)
+  tukey_result <- tukey_results(datos_articulo)
+  
+  tukey_result$articulo <- articulo
+  resultados_tukey_df <- rbind(resultados_tukey_df, tukey_result)
+}
+```
+
+Agrupamiento
+
+```{r}
+# Función para crear subgrupos
+crear_subgrupos <- function(tukey_df, threshold = 0.05) {
+  comparisons <- strsplit(tukey_df$comparison, "-")
+  regiones <- unique(unlist(comparisons))
+  
+  g <- graph.empty(directed = FALSE) + vertices(regiones)
+  
+  for (i in 1:nrow(tukey_df)) {
+    if (!is.na(tukey_df$p_adj[i]) && is.numeric(tukey_df$p_adj[i]) && tukey_df$p_adj[i] <= threshold) {
+      g <- g + edge(comparisons[[i]][1], comparisons[[i]][2])
+    }
+  }
+  
+  # Encontrar componentes conectados, que serán nuestros subgrupos
+  subgrupos <- components(g)$membership
+  
+  # Crear un dataframe con los subgrupos
+  subgrupos_df <- data.frame(region = names(subgrupos), grupo = subgrupos)
+  return(subgrupos_df)
+}
+
+# Aplicar la función para cada artículo y guardar los resultados en un dataframe
+resultados_subgrupos_df <- data.frame(
+  articulo = character(),
+  region = character(),
+  grupo = numeric(),
+  stringsAsFactors = FALSE
+)
+
+for (articulo in unique(resultados_tukey_df$articulo)) {
+  tukey_articulo_df <- resultados_tukey_df %>% filter(articulo == articulo)
+  subgrupos_articulo_df <- crear_subgrupos(tukey_articulo_df)
+  subgrupos_articulo_df$articulo <- articulo
+  resultados_subgrupos_df <- rbind(resultados_subgrupos_df, subgrupos_articulo_df)
+}
+
+```
+

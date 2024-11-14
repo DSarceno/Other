@@ -1,0 +1,42 @@
+Package: paquete
+Title: What the Package Does (One Line, Title Case)
+Version: 0.1.0
+Authors@R: 
+    person(given = "Diego", 
+          family = "Sarceño", 
+          email = "dsarceno68@gmail.com", 
+          role = c("aut", "cre"))
+Description: Carga automáticamente los paquetes que uso normalmente.
+License: `use_mit_license()`
+Encoding: UTF-8
+Imports: 
+  dplyr,
+  tidyr,
+  data.table,
+  readr,
+  ggplot2,
+  plotly,
+  ggmap,
+  leaflet,
+  caret,
+  randomForest,
+  e1071,
+  tidyverse,
+  gapminder,
+  palmerpenguins,
+  nycflights13,
+  readxl,
+  writexl,
+  openxlsx,
+  RSQLite,
+  RMySQL,
+  RPostgreSQL,
+  haven,
+  DBI,
+  odbc,
+  jsonlite,
+  roxygen2,
+  usethis,
+  devtools,
+  microbenchmark
+RoxygenNote: 7.3.1

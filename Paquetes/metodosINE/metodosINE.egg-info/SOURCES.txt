@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+metodosINE/__init__.py
+metodosINE/credenciales.json
+metodosINE/especificas.py
+metodosINE/general.py
+metodosINE.egg-info/PKG-INFO
+metodosINE.egg-info/SOURCES.txt
+metodosINE.egg-info/dependency_links.txt
+metodosINE.egg-info/requires.txt
+metodosINE.egg-info/top_level.txt
