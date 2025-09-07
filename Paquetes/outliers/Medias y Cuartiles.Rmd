@@ -1,0 +1,216 @@
+---
+title: "HB en R"
+author: "Fernando Sáenz"
+date: "2024-06-17"
+output: html_document
+---
+
+Librerías
+
+```{r message=FALSE, warning=FALSE}
+# manejo de datos 
+library(dplyr)
+library(tidyr)
+library(haven)
+library(readxl)
+library(openxlsx)
+library(writexl)
+library(ggplot2)
+library(igraph)
+
+# SQL
+library(DBI)
+library(odbc)
+```
+
+Conexión a la base de datos
+
+```{r}
+# Credenciales
+server <- "ipcprod.database.windows.net"
+user <- "ipcreader"
+pas <- "1pc/*2023"
+database <- "db-indices"
+```
+
+
+```{r}
+# Crea un string completo para conectarse a la base de datos
+conn_str <- paste0(
+  "Driver={ODBC Driver 18 for SQL Server};",
+  "Server=", server, ";",
+  "Database=", database, ";",
+  "Uid=", user, ";",
+  "Pwd=", pas, ";"
+  )
+
+# Conexion a la base de datos
+conexion <- dbConnect(odbc::odbc(), .connection_string=conn_str)
+
+# Limpiesa del environment
+rm(server,
+   user,
+   pas, 
+   database,
+   conn_str)
+
+```
+
+Extracción de precios
+
+```{sql connection=conexion, output.var="recolectados_junio_24"}
+
+-- Store procedures precios recolectados (año, mes)
+
+EXEC [dbo].[sp_get_calculos_precios_recolectados_mes] 2024, 6
+
+```
+
+Extracción de los datos a utilizar
+
+```{r}
+boletas <- recolectados_junio_24[, c(2, 3, 4, 5, 9, 
+                                     11, 12, 16, 18, 21, 
+                                     22, 24, 25, 26, 27, 
+                                     28, 29, 32, 35, 39, 
+                                     42, 64)]
+
+boletas <- arrange(boletas, articulo) %>%
+  filter(estado_boleta  %in% c("Validada", "Imputada")) %>%
+  filter(estado_fuente %in% c("Validada", "Imputada")) %>%
+  filter(estado_registro %in% c("Validada", "Imputada"))
+```
+
+Corrección de novedades técnicas
+
+```{r}
+boletas <- boletas %>%
+  group_by(articulo) %>%
+  mutate(precio_actual = case_when(nt_tipo_nombre == "Periodo de espera" ~ mean(precio_actual, na.rm = TRUE), 
+                                   # imputar con el promedio de precios por artículo 
+                                   nt_tipo_nombre == "Cambio de referencia" ~ precio_anterior,  
+                                   # Utilizar el precio anterior
+                                   TRUE ~ precio_actual  
+                                   # No hacer cambios en otros casos
+                                 )) %>%
+  mutate(cantidad_actual = case_when(nt_tipo_nombre == "Periodo de espera" ~ mean(cantidad_actual, na.rm = TRUE),  
+                                     # Imputar con el promedio de cantidades por artículo 
+                                     nt_tipo_nombre == "Cambio de referencia" ~ cantidad_anterior,  
+                                     # Utilizar la cantidad anterior
+                                     TRUE ~ cantidad_actual  
+                                     # No hacer cambios en otros casos
+                                 )) %>%
+  ungroup()
+```
+
+Corrección de precios a unidad base
+
+```{r}
+boletas <- boletas %>%
+  mutate(precio_actual = ifelse(cantidad_actual == 0, precio_anterior, cantidad_base * precio_actual/cantidad_actual)) %>%
+  mutate(precio_anterior = ifelse(precio_anterior == 0, precio_anterior, cantidad_base * precio_anterior/cantidad_anterior)) %>%
+  mutate(cantidad_actual = ifelse(cantidad_actual == 0, cantidad_actual, cantidad_base)) %>%
+  mutate(cantidad_anterior = ifelse(precio_anterior == 0, cantidad_anterior, cantidad_base)) %>%
+  mutate(variacion_precio_anterior = ifelse(precio_anterior == 0, 1, precio_actual/precio_anterior)) %>%
+  mutate(variacion_porcentual = variacion_precio_anterior * 100 - 100)
+```
+
+Test de normalidad
+
+```{r}
+norm_test <- function(data){
+  
+  if(nrow(data) < 3){
+    return(data.frame(
+      articulo = unique(data$articulo), 
+      p_valor = 0, 
+      norm = 0
+    ))
+  }
+  
+  if(length(unique(data$variacion_precio_anterior)) == 1) { 
+    return(data.frame(
+      articulo = unique(data$articulo),
+      p_valor = 0,
+      norm = 0
+    ))
+  } else {
+    
+    shapiro_test <- shapiro.test(data$variacion_precio_anterior)
+    
+    return(data.frame(
+    articulo = unique(data$articulo),
+    p_valor = shapiro_test$p.value, 
+    norm = ifelse(shapiro_test$p.value < 0.05, 0, 1) 
+  ))
+
+    }
+  
+ }
+
+resultados_norm <- boletas %>%
+  group_by(articulo, region) %>%
+  do(norm_test(.))%>%
+  filter(norm == 1) %>%
+  pull(articulo)
+```
+
+Metodo
+
+```{r}
+C <- 6
+Bd_Cuartiles <- boletas %>%
+  filter(articulo %in% resultados_norm) %>%
+    group_by(articulo, region) %>%
+    summarise(cuartil1 =
+                quantile(variacion_precio_anterior, prob = c(0.25)),
+              
+              cuartil3 =
+                quantile(variacion_precio_anterior, prob = c(0.75)),
+              
+              Mediana = median(variacion_precio_anterior),
+              
+              Promedio_DM = (cuartil3 - cuartil1) / 2,
+              
+              Limte_U = (Mediana + C * Promedio_DM),
+              
+              Limite_l = (Mediana - C * Promedio_DM),
+              
+              Cuartil1_SI = (1 - (Mediana / cuartil1)),
+              
+              Cuartil3_SI = ((cuartil3 / Mediana) - 1),
+              
+              Mediana_SI = ((Mediana / Mediana) - 1),
+              
+              
+              Promedio_SI = ((Cuartil3_SI - Cuartil1_SI) / 2),
+              
+              Limite_U_SI = (Mediana_SI + C * Promedio_SI),
+              
+              Limite_l_SI = (Mediana_SI - C * Promedio_SI))
+```
+
+Unir los datos 
+
+```{r}
+BD_DATOS <- merge(boletas,Bd_Cuartiles, by = c("articulo", "region"), all = TRUE)
+```
+
+Calcular el valor de SI
+
+```{r}
+  BD_DATOS$SI <- ifelse(BD_DATOS$variacion_precio_anterior < BD_DATOS$Mediana,
+                        (1 - (BD_DATOS$Mediana / BD_DATOS$variacion_precio_anterior)),
+                        ((BD_DATOS$variacion_precio_anterior / BD_DATOS$Mediana) - 1))
+```
+
+Calcular el criterio
+
+```{r}
+  BD_DATOS <- BD_DATOS %>% 
+  mutate(Criterio = ifelse(Limite_l_SI > SI,1,0)) %>%
+  mutate(Criterio = ifelse(SI > Limite_U_SI, 1, Criterio))
+```
+
+
+

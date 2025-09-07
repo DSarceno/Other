@@ -1,0 +1,35 @@
+{
+    "databases" : {
+      "ipc": {
+        "driver": "ODBC Driver 18 for SQL Server",
+        "server": "ipcprod.database.windows.net",
+        "port": 1433,
+        "database": "db-indices",
+        "user": "ipcreader",
+        "password": "1pc/*2023"
+      },
+      "inegt-ipc" : {
+        "motor": "ODBC Driver 18 for SQL Server",
+        "server": "inegt-ipc.database.windows.net",
+        "puerto": 1433,
+        "database": "db-indices",
+        "user": "ipcuser_exec",
+        "password": "In3/*ipc2023"
+      },
+      "diec-critica" : {
+        "driver": "ODBC Driver 18 for SQL Server",
+        "server": "ipcprod.database.windows.net",
+        "port": 1433,
+        "database": "db-indices",
+        "user": "ipcreader",
+        "password": "1pc/*2023"
+      },
+      "BaseDeDatos3" : {
+        "motor": "MongoDB",
+        "host": "localhost",
+        "puerto": 27017,
+        "usuario": "",
+        "contrasena": ""
+      }
+    }
+}

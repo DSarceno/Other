@@ -1,0 +1,170 @@
+[
+    {
+        "name":  ".5c3f1ed5",
+        "version":  "e2d7"
+    },
+    {
+        "name":  ".cfecb00c",
+        "version":  "3b80"
+    },
+    {
+        "name":  "arbaouimehdi.photon",
+        "version":  "0.0.1"
+    },
+    {
+        "name":  "cameronbieganek.julia",
+        "version":  "color"
+    },
+    {
+        "name":  "esbenp.prettier",
+        "version":  "vscode"
+    },
+    {
+        "name":  "formulahendry.auto",
+        "version":  "rename"
+    },
+    {
+        "name":  "grapecity.gc",
+        "version":  "excelviewer"
+    },
+    {
+        "name":  "hediet.vscode",
+        "version":  "drawio"
+    },
+    {
+        "name":  "huyza.dax",
+        "version":  "language"
+    },
+    {
+        "name":  "jianfajun.dax",
+        "version":  "language"
+    },
+    {
+        "name":  "julialang.language",
+        "version":  "julia"
+    },
+    {
+        "name":  "kylebarron.stata",
+        "version":  "enhanced"
+    },
+    {
+        "name":  "mechatroner.rainbow",
+        "version":  "csv"
+    },
+    {
+        "name":  "mhutchie.git",
+        "version":  "graph"
+    },
+    {
+        "name":  "ms",
+        "version":  "azuretools.vscode"
+    },
+    {
+        "name":  "ms",
+        "version":  "ceintl.vscode"
+    },
+    {
+        "name":  "ms",
+        "version":  "mssql.data"
+    },
+    {
+        "name":  "ms",
+        "version":  "mssql.mssql"
+    },
+    {
+        "name":  "ms",
+        "version":  "mssql.sql"
+    },
+    {
+        "name":  "ms",
+        "version":  "mssql.sql"
+    },
+    {
+        "name":  "ms",
+        "version":  "python.debugpy"
+    },
+    {
+        "name":  "ms",
+        "version":  "python.python"
+    },
+    {
+        "name":  "ms",
+        "version":  "python.vscode"
+    },
+    {
+        "name":  "ms",
+        "version":  "toolsai.jupyter"
+    },
+    {
+        "name":  "ms",
+        "version":  "toolsai.jupyter"
+    },
+    {
+        "name":  "ms",
+        "version":  "toolsai.jupyter"
+    },
+    {
+        "name":  "ms",
+        "version":  "toolsai.jupyter"
+    },
+    {
+        "name":  "ms",
+        "version":  "toolsai.jupyter"
+    },
+    {
+        "name":  "ms",
+        "version":  "toolsai.vscode"
+    },
+    {
+        "name":  "ms",
+        "version":  "toolsai.vscode"
+    },
+    {
+        "name":  "ms",
+        "version":  "vscode"
+    },
+    {
+        "name":  "mtxr.sqltools",
+        "version":  "0.28.3"
+    },
+    {
+        "name":  "mtxr.sqltools",
+        "version":  "driver"
+    },
+    {
+        "name":  "pkief.material",
+        "version":  "icon"
+    },
+    {
+        "name":  "rafamel.subtle",
+        "version":  "brackets"
+    },
+    {
+        "name":  "reditorsupport.r",
+        "version":  "2.8.4"
+    },
+    {
+        "name":  "sirtori.indenticator",
+        "version":  "0.7.0"
+    },
+    {
+        "name":  "tomoki1207.pdf",
+        "version":  "1.2.2"
+    },
+    {
+        "name":  "whizkydee.material",
+        "version":  "palenight"
+    },
+    {
+        "name":  "yzhang.markdown",
+        "version":  "all"
+    },
+    {
+        "name":  "zhuangtongfa.material",
+        "version":  "theme"
+    },
+    {
+        "name":  "extensions.json",
+        "version":  null
+    }
+]

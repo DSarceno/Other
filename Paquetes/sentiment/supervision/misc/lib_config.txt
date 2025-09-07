@@ -1,0 +1,24 @@
+# Instalación de TensorFlow y Keras
+pip install tensorflow
+
+# Instalación de bibliotecas para procesamiento de lenguaje natural (NLP)
+pip install tensorflow-text
+pip install nltk
+pip install spacy
+pip install gensim
+
+# Para descargar los datos de spaCy, como el modelo de idioma en español o inglés
+python -m spacy download en_core_web_sm  # Para inglés
+python -m spacy download es_core_news_sm  # Para español
+
+# Instalación de la biblioteca de Hugging Face Transformers
+pip install transformers
+
+# Instalación de bibliotecas de preprocesamiento de datos
+pip install pandas
+pip install numpy
+pip install scikit-learn
+
+# Instalación de otras herramientas de utilidad
+pip install tqdm
+pip install matplotlib seaborn
