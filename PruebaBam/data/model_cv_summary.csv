@@ -1,0 +1,4 @@
+model,best_params,cv_rmse_mean,cv_rmse_std
+HGBR,"{'model__l2_regularization': 1.0, 'model__learning_rate': 0.05, 'model__max_depth': 6, 'model__max_leaf_nodes': 63}",1.4877198325942882,0.03738519339864277
+ElasticNet,"{'model__alpha': 0.05, 'model__l1_ratio': 0.9}",2.121459709488621,0.03635004264407999
+DummyMedian,{},4.441028899607898,0.03207404144797179
